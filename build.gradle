@@ -16,6 +16,7 @@ repositories {
 
 dependencies {
     compile "net.dreamlu:mica-core:${micaVersion}"
+    compile "com.github.yangtu222:BeanUtils:1.0.10"
     compile "cn.hutool:hutool-core:4.5.2"
     compile "org.openjdk.jmh:jmh-core:1.21"
     compile "org.openjdk.jmh:jmh-generator-annprocess:1.21"

@@ -1,5 +1,6 @@
 package jmh.benchmarks;
 
+import com.tuyang.beanutils.BeanCopyUtils;
 import jmh.benchmarks.bean.FormUser;
 import jmh.benchmarks.bean.ToUser;
 import jmh.benchmarks.mapper.MapStructMapper;
@@ -108,6 +109,20 @@ public class BeanCopySimpleBenchmark {
 		ToUser toUser = null;
 		for (int i = 0; i < 10000; i++) {
 			toUser = SelmaMapper.MAPPER.toTarget(user);
+		}
+		return toUser;
+	}
+
+	@Benchmark
+	public ToUser yangtu222BeanCopyAOne() {
+		return BeanCopyUtils.copyBean(user, ToUser.class);
+	}
+
+	@Benchmark
+	public ToUser yangtu222BeanCopyBMillion() {
+		ToUser toUser = null;
+		for (int i = 0; i < 10000; i++) {
+			toUser = BeanCopyUtils.copyBean(user, ToUser.class);
 		}
 		return toUser;
 	}
