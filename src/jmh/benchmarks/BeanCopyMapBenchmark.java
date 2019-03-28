@@ -22,8 +22,8 @@ import java.util.concurrent.TimeUnit;
  *
  * @author L.cm
  */
-@BenchmarkMode(Mode.AverageTime)
-@OutputTimeUnit(TimeUnit.MICROSECONDS)
+@BenchmarkMode(Mode.Throughput)
+@OutputTimeUnit(TimeUnit.MILLISECONDS)
 @State(Scope.Thread)
 public class BeanCopyMapBenchmark {
 	private Map<String, Object> userMap;

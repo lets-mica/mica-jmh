@@ -94,40 +94,40 @@ public class ToConvertUser {
 * RAM: 8 GB 1600 MHz DDR3
 * JVM: Oracle 1.8.0_201 64 bits
 
-#### BeanCopySimpleBenchmark (简单模型，1次 和 万次)
-| Benchmark                                         |  Mode |  Cnt |     Score |      Error |  Units |
-| ---- | ---- | ---- | ---- | ---- | ---- |
-| BeanCopyBenchmark.selmaBeanCopyAOne               |  avgt |    5 |     0.005 ± |    0.001 |  us/op |
-| BeanCopyBenchmark.selmaBeanCopyBMillion           |  avgt |    5 |    43.293 ± |    7.949 |  us/op |
-| BeanCopyBenchmark.mapStructBeanCopyAOne           |  avgt |    5 |     0.022 ± |    0.007 |  us/op |
-| BeanCopyBenchmark.mapStructBeanCopyBMillion       |  avgt |    5 |   192.860 ± |   48.923 |  us/op |
-| BeanCopyBenchmark.micaBeanCopyAOne                |  avgt |    5 |     0.058 ± |    0.003 |  us/op |
-| BeanCopyBenchmark.micaBeanCopyBMillion            |  avgt |    5 |   549.505 ± |  151.253 |  us/op |
-| BeanCopySimpleBenchmark.yangtu222BeanCopyAOne     |  avgt |    5 |     0.054 ± |    0.005 |  us/op |
-| BeanCopySimpleBenchmark.yangtu222BeanCopyBMillion |  avgt |    5 |   604.569 ± |  364.083 |  us/op |
-| BeanCopyBenchmark.springBeanCopyAOne              |  avgt |    5 |     0.311 ± |    0.022 |  us/op |
-| BeanCopyBenchmark.springBeanCopyBMillion          |  avgt |    5 |  3069.566 ± | 1329.840 |  us/op |
-| BeanCopyBenchmark.hutoolBeanCopyAOne              |  avgt |    5 |     0.524 ± |    0.009 |  us/op |
-| BeanCopyBenchmark.hutoolBeanCopyBMillion          |  avgt |    5 |  5475.577 ± | 1477.377 |  us/op |
+#### 简单模型
 
-#### BeanCopyListBenchmark (列表模型 100 item)
-| Benchmark                             |  Mode |  Cnt |   Score |   Error |  Units |
-| ---- | ---- | ---- | ---- | ---- | ---- |
-| BeanCopyListBenchmark.micaBeanCopy    |  avgt |    5 |   6.401 ± | 1.367 |  us/op |
-| BeanCopyListBenchmark.springBeanCopy  |  avgt |    5 |  31.197 ± | 8.678 |  us/op |
+| Benchmark                             |   Mode |  Cnt  |      Score   |    Error |   Units |
+| ------------------------------------- | ------ | ----- | ------------ | -------- | ------- |
+| BeanCopyBenchmark.hutoolBeanCopy      |  thrpt |    5  |   1939.092 ± |   26.747 |  ops/ms |
+| BeanCopyBenchmark.springBeanCopy      |  thrpt |    5  |   3569.035 ± |   39.607 |  ops/ms |
+| BeanCopyBenchmark.cglibBeanCopy       |  thrpt |    5  |   9112.785 ± |  560.503 |  ops/ms |
+| BeanCopyBenchmark.micaBeanCopy        |  thrpt |    5  |  17753.409 ± |  393.245 |  ops/ms |
+| BeanCopyBenchmark.yangtu222BeanCopy   |  thrpt |    5  |  18201.997 ± |  119.189 |  ops/ms |
+| BeanCopyBenchmark.cglibMapperBeanCopy |  thrpt |    5  |  37679.510 ± | 3544.624 |  ops/ms |
+| BeanCopyBenchmark.mapStructBeanCopy   |  thrpt |    5  |  50328.045 ± |  529.707 |  ops/ms |
+| BeanCopyBenchmark.selmaBeanCopy       |  thrpt |    5  | 200859.561 ± | 2370.531 |  ops/ms |
 
-#### BeanCopyConvertBenchmark (附带类型转换-日期)
-| Benchmark                                  |   Mode |  Cnt |  Score |   Error |  Units |
-| ---- | ---- | ---- | ---- | ---- | ---- |
-| BeanCopyConvertBenchmark.selmaBeanCopy     |   avgt |    3 |  0.296 ± | 0.002 |  us/op |
-| BeanCopyConvertBenchmark.mapStructBeanCopy |   avgt |    3 |  0.618 ± | 0.022 |  us/op |
-| BeanCopyConvertBenchmark.micaBeanCopy      |   avgt |    3 |  0.884 ± | 0.038 |  us/op |
+#### 附带类型转换(日期)
 
-#### BeanCopyMapBenchmark (Map 拷贝到 bean)
-| Benchmark                           |   Mode |   Cnt |   Score |    Error |   Units |
-| ---- | ---- | ---- | ---- | ---- | ---- |
-| BeanCopyMapBenchmark.micaBeanCopy   |   avgt |     5 |   0.081 ± |  0.011 |   us/op |
-| BeanCopyMapBenchmark.hutoolBeanCopy |   avgt |     5 |   0.782 ± |  0.041 |   us/op |
+| Benchmark                                  |  Mode  | Cnt  |     Score    |  Error     | Units  |
+| ------------------------------------------ | ------ | ---- | ------------ | ---------  | ------ |
+| BeanCopyConvertBenchmark.micaBeanCopy      | thrpt  |  5   |   1186.375 ± |    64.686  | ops/ms |
+| BeanCopyConvertBenchmark.mapStructBeanCopy | thrpt  |  5   |   1623.478 ± |    13.894  | ops/ms |
+| BeanCopyConvertBenchmark.selmaBeanCopy     | thrpt  |  5   | 160020.595 ± |  2570.747  | ops/ms |
+
+#### 列表模型(100 item)
+
+| Benchmark                            |   Mode |  Cnt  |  Score     | Error |  Units  |
+| ------------------------------------ | ------ | ----- | ---------- | ----- | ------- |
+| BeanCopyListBenchmark.springBeanCopy |  thrpt |   5   |   35.974 ± | 0.555 |  ops/ms |
+| BeanCopyListBenchmark.micaBeanCopy   |  thrpt |   5   |  169.066 ± | 5.460 |  ops/ms |
+
+#### Map 拷贝到 bean
+
+| Benchmark                           |  Mode  | Cnt   |   Score      | Error  | Units  |
+| ----------------------------------- | ------ | ----- | ------------ | ------ | ------ |
+| BeanCopyMapBenchmark.hutoolBeanCopy | thrpt  |  5    |   1338.551 ± | 16.746 | ops/ms |
+| BeanCopyMapBenchmark.micaBeanCopy   | thrpt  |  5    |  13577.056 ± | 27.795 | ops/ms |
 
 ## 结论
 和 [java-object-mapper-benchmark](https://github.com/arey/java-object-mapper-benchmark) 测试结果有些出入。
