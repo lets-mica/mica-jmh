@@ -132,6 +132,7 @@ public class ToConvertUser {
 Selma 的表现反而比 MapStruct 更好，可能是模型不一样导致的。
 
 ## 开源推荐
+- `mica` Spring boot 微服务高效开发工具集：[https://gitee.com/596392912/mica](https://gitee.com/596392912/mica)
 - `Avue` 一款基于vue可配置化的神奇框架：[https://gitee.com/smallweigit/avue](https://gitee.com/smallweigit/avue)
 - `pig` 宇宙最强微服务（架构师必备）：[https://gitee.com/log4j/pig](https://gitee.com/log4j/pig)
 - `SpringBlade` 完整的线上解决方案（企业开发必备）：[https://gitee.com/smallc/SpringBlade](https://gitee.com/smallc/SpringBlade)
