@@ -96,38 +96,38 @@ public class ToConvertUser {
 
 #### 简单模型
 
-| Benchmark                             |   Mode |  Cnt  |      Score   |    Error |   Units |
-| ------------------------------------- | ------ | ----- | ------------ | -------- | ------- |
-| BeanCopyBenchmark.hutoolBeanCopy      |  thrpt |    5  |   1939.092 ± |   26.747 |  ops/ms |
-| BeanCopyBenchmark.springBeanCopy      |  thrpt |    5  |   3569.035 ± |   39.607 |  ops/ms |
-| BeanCopyBenchmark.cglibBeanCopy       |  thrpt |    5  |   9112.785 ± |  560.503 |  ops/ms |
-| BeanCopyBenchmark.micaBeanCopy        |  thrpt |    5  |  17753.409 ± |  393.245 |  ops/ms |
-| BeanCopyBenchmark.yangtu222BeanCopy   |  thrpt |    5  |  18201.997 ± |  119.189 |  ops/ms |
-| BeanCopyBenchmark.cglibMapperBeanCopy |  thrpt |    5  |  37679.510 ± | 3544.624 |  ops/ms |
-| BeanCopyBenchmark.mapStructBeanCopy   |  thrpt |    5  |  50328.045 ± |  529.707 |  ops/ms |
-| BeanCopyBenchmark.selmaBeanCopy       |  thrpt |    5  | 200859.561 ± | 2370.531 |  ops/ms |
+| Benchmark           |   Mode |  Cnt  |      Score   |    Error |   Units |
+| ------------------- | ------ | ----- | ------------ | -------- | ------- |
+| hutoolBeanCopy      |  thrpt |    5  |   1939.092 ± |   26.747 |  ops/ms |
+| springBeanCopy      |  thrpt |    5  |   3569.035 ± |   39.607 |  ops/ms |
+| cglibBeanCopy       |  thrpt |    5  |   9112.785 ± |  560.503 |  ops/ms |
+| micaBeanCopy        |  thrpt |    5  |  17753.409 ± |  393.245 |  ops/ms |
+| yangtu222BeanCopy   |  thrpt |    5  |  18201.997 ± |  119.189 |  ops/ms |
+| cglibMapperBeanCopy |  thrpt |    5  |  37679.510 ± | 3544.624 |  ops/ms |
+| mapStructBeanCopy   |  thrpt |    5  |  50328.045 ± |  529.707 |  ops/ms |
+| selmaBeanCopy       |  thrpt |    5  | 200859.561 ± | 2370.531 |  ops/ms |
 
 #### 附带类型转换(日期)
 
-| Benchmark                                  |  Mode  | Cnt  |     Score    |  Error     | Units  |
-| ------------------------------------------ | ------ | ---- | ------------ | ---------  | ------ |
-| BeanCopyConvertBenchmark.micaBeanCopy      | thrpt  |  5   |   1186.375 ± |    64.686  | ops/ms |
-| BeanCopyConvertBenchmark.mapStructBeanCopy | thrpt  |  5   |   1623.478 ± |    13.894  | ops/ms |
-| BeanCopyConvertBenchmark.selmaBeanCopy     | thrpt  |  5   | 160020.595 ± |  2570.747  | ops/ms |
+| Benchmark         |  Mode  | Cnt  |     Score    |  Error     | Units  |
+| ----------------- | ------ | ---- | ------------ | ---------  | ------ |
+| micaBeanCopy      | thrpt  |  5   |   1186.375 ± |    64.686  | ops/ms |
+| mapStructBeanCopy | thrpt  |  5   |   1623.478 ± |    13.894  | ops/ms |
+| selmaBeanCopy     | thrpt  |  5   | 160020.595 ± |  2570.747  | ops/ms |
 
 #### 列表模型(100 item)
 
-| Benchmark                            |   Mode |  Cnt  |  Score     | Error |  Units  |
-| ------------------------------------ | ------ | ----- | ---------- | ----- | ------- |
-| BeanCopyListBenchmark.springBeanCopy |  thrpt |   5   |   35.974 ± | 0.555 |  ops/ms |
-| BeanCopyListBenchmark.micaBeanCopy   |  thrpt |   5   |  169.066 ± | 5.460 |  ops/ms |
+| Benchmark      |   Mode |  Cnt  |  Score     | Error |  Units  |
+| -------------- | ------ | ----- | ---------- | ----- | ------- |
+| springBeanCopy |  thrpt |   5   |   35.974 ± | 0.555 |  ops/ms |
+| micaBeanCopy   |  thrpt |   5   |  169.066 ± | 5.460 |  ops/ms |
 
 #### Map 拷贝到 bean
 
-| Benchmark                           |  Mode  | Cnt   |   Score      | Error  | Units  |
-| ----------------------------------- | ------ | ----- | ------------ | ------ | ------ |
-| BeanCopyMapBenchmark.hutoolBeanCopy | thrpt  |  5    |   1338.551 ± | 16.746 | ops/ms |
-| BeanCopyMapBenchmark.micaBeanCopy   | thrpt  |  5    |  13577.056 ± | 27.795 | ops/ms |
+| Benchmark      |  Mode  | Cnt   |   Score      | Error  | Units  |
+| -------------- | ------ | ----- | ------------ | ------ | ------ |
+| hutoolBeanCopy | thrpt  |  5    |   1338.551 ± | 16.746 | ops/ms |
+| micaBeanCopy   | thrpt  |  5    |  13577.056 ± | 27.795 | ops/ms |
 
 ## 结论
 和 [java-object-mapper-benchmark](https://github.com/arey/java-object-mapper-benchmark) 测试结果有些出入。
