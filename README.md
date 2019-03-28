@@ -123,7 +123,7 @@ public class ToConvertUser {
 #### BeanCopyMapBenchmark (Map 拷贝到 bean)
 | Benchmark                           |   Mode |   Cnt |   Score |    Error |   Units |
 | ---- | ---- | ---- | ---- | ---- | ---- |
-| BeanCopyMapBenchmark.micaBeanCopy   |   avgt |     5 |   0.081 ± |  0.011 |   us/opop |
+| BeanCopyMapBenchmark.micaBeanCopy   |   avgt |     5 |   0.081 ± |  0.011 |   us/op |
 | BeanCopyMapBenchmark.hutoolBeanCopy |   avgt |     5 |   0.782 ± |  0.041 |   us/op |
 
 ## 结论
