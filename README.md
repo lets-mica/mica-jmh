@@ -3,10 +3,10 @@ mica 功能压测
 
 ## bean 拷贝工具
 
-- [MapStruct](http://mapstruct.org/)
-- [Selma](http://www.selma-java.org/)
-- [hutool](https://gitee.com/loolly/hutool)
-- [mica](https://github.com/lets-mica/mica)
+- [MapStruct (编译期生成 Mapper 实现)](http://mapstruct.org/) 
+- [Selma (编译期生成 Mapper 实现)](http://www.selma-java.org/)
+- [mica (第一次生成 copy 实现)](https://github.com/lets-mica/mica)
+- [hutool (反射)](https://gitee.com/loolly/hutool)
 
 ## 模型
 #### 无类型转换
