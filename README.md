@@ -94,7 +94,7 @@ public class ToConvertUser {
 * RAM: 8 GB 1600 MHz DDR3
 * JVM: Oracle 1.8.0_201 64 bits
 
-#### BeanCopySimpleBenchmark (简单模型)
+#### BeanCopySimpleBenchmark (简单模型，1次 和 万次)
 | Benchmark                                         |  Mode |  Cnt |     Score |      Error |  Units |
 | ---- | ---- | ---- | ---- | ---- | ---- |
 | BeanCopyBenchmark.selmaBeanCopyAOne               |  avgt |    5 |     0.005 ± |    0.001 |  us/op |
