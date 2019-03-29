@@ -1,4 +1,4 @@
-package jmh.benchmarks;
+package jmh.benchmarks.beanutils;
 
 import jmh.benchmarks.bean.FormUser;
 import jmh.benchmarks.bean.ToUser;
