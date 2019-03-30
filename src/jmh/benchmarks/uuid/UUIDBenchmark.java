@@ -29,20 +29,20 @@ public class UUIDBenchmark {
 	}
 
 	@Benchmark
-	public String hutoolSimpleUUID() {
-		return IdUtil.simpleUUID();
+	public String hutoolFastSimpleUUID() {
+		return IdUtil.fastSimpleUUID();
 	}
 
 	@Benchmark
 	public String jdk8UUId() {
-		return UUID.randomUUID().toString().replace("-", "");
+		return UUID.randomUUID().toString();
 	}
 
 	@Benchmark
 	public String jdk8ThreadLocalRandomUUId() {
 		ThreadLocalRandom random = ThreadLocalRandom.current();
 		UUID uuid = new UUID(random.nextInt(), random.nextInt());
-		return uuid.toString().replace("-", "");
+		return uuid.toString();
 	}
 
 	public static void main(String[] args) throws RunnerException {
