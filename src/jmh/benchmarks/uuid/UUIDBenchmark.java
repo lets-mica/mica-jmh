@@ -19,7 +19,7 @@ import java.util.concurrent.TimeUnit;
  * @author L.cm
  */
 @BenchmarkMode(Mode.Throughput)
-@OutputTimeUnit(TimeUnit.MILLISECONDS)
+@OutputTimeUnit(TimeUnit.SECONDS)
 @State(Scope.Thread)
 public class UUIDBenchmark {
 
