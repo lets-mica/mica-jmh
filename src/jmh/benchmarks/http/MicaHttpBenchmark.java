@@ -19,9 +19,11 @@ import java.util.concurrent.TimeUnit;
  * @author L.cm
  */
 @BenchmarkMode(Mode.Throughput)
-@OutputTimeUnit(TimeUnit.MILLISECONDS)
+@OutputTimeUnit(TimeUnit.MINUTES)
 @State(Scope.Thread)
 public class MicaHttpBenchmark {
+
+	private OkHttpClient httpClient = new OkHttpClient();
 
 	@Benchmark
 	public String micaHttp() {
@@ -30,15 +32,16 @@ public class MicaHttpBenchmark {
 			.asString();
 	}
 
-	private OkHttpClient httpClient = new OkHttpClient();
-
 	@Benchmark
 	public String okHttp() throws IOException {
 		Request request = new Request.Builder()
 			.get()
 			.url("https://www.baidu.com")
 			.build();
-		return httpClient.newCall(request).execute().body().string();
+		return httpClient.newCall(request)
+			.execute()
+			.body()
+			.string();
 	}
 
 	public static void main(String[] args) throws RunnerException {
