@@ -5,7 +5,7 @@ import jmh.benchmarks.bean.FormConvertUser;
 import jmh.benchmarks.bean.FormUser;
 import jmh.benchmarks.bean.ToConvertUser;
 import jmh.benchmarks.bean.ToUser;
-import net.dreamlu.mica.core.utils.DateTimeUtil;
+import net.dreamlu.mica.core.utils.DateUtil;
 
 import java.time.LocalDateTime;
 
@@ -43,7 +43,7 @@ public interface SelmaMapper {
 	class BirthdayMapper {
 
 		public String mapBirthday(LocalDateTime birthday){
-			return DateTimeUtil.formatDateTime(birthday);
+			return DateUtil.formatDateTime(birthday);
 		}
 
 	}
