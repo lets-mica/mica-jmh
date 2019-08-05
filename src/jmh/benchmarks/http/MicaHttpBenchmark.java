@@ -22,13 +22,13 @@ import java.util.concurrent.TimeUnit;
 @OutputTimeUnit(TimeUnit.MINUTES)
 @State(Scope.Thread)
 public class MicaHttpBenchmark {
-	private static final String USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36";
-
 	private OkHttpClient httpClient = new OkHttpClient();
 
 	@Benchmark
 	public String micaHttp() {
+		// 百度不同 ua 解析差别很大，故采用相同 ua，保证公平
 		return HttpRequest.get("https://www.baidu.com/")
+			.userAgent("okhttp/3.14.2")
 			.execute()
 			.asString();
 	}
@@ -38,7 +38,6 @@ public class MicaHttpBenchmark {
 		Request request = new Request.Builder()
 			.get()
 			.url("https://www.baidu.com")
-			.addHeader("User-Agent", USER_AGENT)
 			.build();
 		return httpClient.newCall(request)
 			.execute()
@@ -51,7 +50,6 @@ public class MicaHttpBenchmark {
 		Request request = new Request.Builder()
 			.get()
 			.url("https://www.baidu.com")
-			.addHeader("User-Agent", USER_AGENT)
 			.build();
 		return new OkHttpClient().newCall(request)
 			.execute()

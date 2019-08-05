@@ -8,6 +8,8 @@ mica 工具性能压测，目的是鞭策自己，让 `mica` 性能更加优秀�
 
 [java date 时间压测](https://github.com/lets-mica/mica-jmh/wiki/date)
 
+[http 压测结果报告](https://github.com/lets-mica/mica-jmh/wiki/http)
+
 ## 开源推荐
 - `mica` Spring boot 微服务高效开发工具集：[https://gitee.com/596392912/mica](https://gitee.com/596392912/mica)
 - `Avue` 一款基于vue可配置化的神奇框架：[https://gitee.com/smallweigit/avue](https://gitee.com/smallweigit/avue)
