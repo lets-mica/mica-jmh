@@ -55,3 +55,5 @@ Servers
 .metadata
 upload
 gen_code
+
+jmh-result.text

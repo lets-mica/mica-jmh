@@ -1,7 +1,7 @@
 apply plugin: "java"
 
 ext {
-    micaVersion = "1.1.7"
+    micaVersion = "1.1.9"
     lombokVersion = "1.18.6"
 }
 
@@ -33,4 +33,8 @@ sourceSets {
     main {
         java.srcDirs = ["src"]
     }
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
 }
