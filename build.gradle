@@ -16,6 +16,7 @@ repositories {
 }
 
 dependencies {
+    compile "org.slf4j:slf4j-api:1.7.30"
     compile "net.dreamlu:mica-core:${micaVersion}"
     compile "net.dreamlu:mica-http:${micaVersion}"
     compile "com.github.yangtu222:BeanUtils:1.0.11"
