@@ -1,6 +1,5 @@
 package jmh.benchmarks.convert;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import jmh.benchmarks.bean.ToUser;
 import net.dreamlu.mica.core.utils.BeanUtil;
 import net.dreamlu.mica.core.utils.ConvertUtil;
@@ -25,8 +24,6 @@ import java.util.concurrent.TimeUnit;
 @OutputTimeUnit(TimeUnit.MILLISECONDS)
 @State(Scope.Thread)
 public class BeanConvertTest {
-	private static final ObjectMapper objectMapper = JsonUtil.getInstance();
-
 	private Map<String, Object> userMap;
 
 	@Setup
@@ -49,7 +46,7 @@ public class BeanConvertTest {
 
 	@Benchmark
 	public Double PrimitiveJackson() {
-		return objectMapper.convertValue("1.23456", Double.TYPE);
+		return JsonUtil.convertValue("1.23456", Double.TYPE);
 	}
 
 	@Benchmark
@@ -59,7 +56,7 @@ public class BeanConvertTest {
 
 	@Benchmark
 	public ToUser MapToBeanJackson() {
-		return objectMapper.convertValue(userMap, ToUser.class);
+		return JsonUtil.convertValue(userMap, ToUser.class);
 	}
 
 	public static void main(String[] args) throws RunnerException {
