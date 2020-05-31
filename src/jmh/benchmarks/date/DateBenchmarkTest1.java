@@ -1,6 +1,6 @@
 package jmh.benchmarks.date;
 
-import cn.hutool.core.date.DateUtil;
+import net.dreamlu.mica.core.utils.DateUtil;
 import org.apache.commons.lang3.time.FastDateFormat;
 import org.openjdk.jmh.annotations.*;
 import org.openjdk.jmh.results.format.ResultFormatType;
