@@ -22,7 +22,7 @@ dependencies {
     compile "net.dreamlu:mica-http:${micaVersion}"
     compile "com.github.yangtu222:BeanUtils:1.0.11"
     compile "cn.hutool:hutool-core:5.6.3"
-    compile "org.apache.commons:commons-lang3.12.0"
+    compile "org.apache.commons:commons-lang:3.12.0"
     compile "org.openjdk.jmh:jmh-core:${jmhVersion}"
     compile "org.mapstruct:mapstruct:1.4.2.Final"
     compile "fr.xebia.extras:selma:1.0"
