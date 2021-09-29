@@ -1,8 +1,8 @@
 apply plugin: "java"
 
 ext {
-    jmhVersion = "1.29"
-    micaVersion = "2.4.5-SNAPSHOT"
+    jmhVersion = "1.33"
+    micaVersion = "2.5.5"
     lombokVersion = "1.18.20"
 }
 
