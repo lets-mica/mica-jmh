@@ -43,14 +43,14 @@ public class DateBenchmarkDate {
 		return Date.from(instant);
 	}
 
-	@Benchmark
-	public Date localTime() {
-		LocalTime lt = LocalTime.now();
-		Instant instant = lt.atDate(LocalDate.EPOCH)
-			.atZone(ZoneOffset.UTC)
-			.toInstant();
-		return Date.from(instant);
-	}
+//	@Benchmark
+//	public Date localTime() {
+//		LocalTime lt = LocalTime.now();
+//		Instant instant = lt.atDate(LocalDate.EPOCH)
+//			.atZone(ZoneOffset.UTC)
+//			.toInstant();
+//		return Date.from(instant);
+//	}
 
 	public static void main(String[] args) throws RunnerException {
 		Options opts = new OptionsBuilder()

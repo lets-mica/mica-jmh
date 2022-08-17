@@ -1,15 +1,13 @@
 apply plugin: "java"
 
 ext {
-    jmhVersion = "1.33"
-    micaVersion = "2.5.5"
-    lombokVersion = "1.18.20"
+    jmhVersion = "1.35"
+    micaVersion = "2.7.2"
+    lombokVersion = "1.18.24"
 }
 
 repositories {
     mavenLocal()
-    maven { url "https://repo.spring.io/libs-release" }
-    maven { url "https://repo.spring.io/milestone" }
     maven { url "http://maven.aliyun.com/nexus/content/groups/public" }
     // 添加 snapshots 库地址
     maven { url "https://oss.sonatype.org/content/repositories/snapshots" }
@@ -21,8 +19,7 @@ dependencies {
     compile "net.dreamlu:mica-core:${micaVersion}"
     compile "net.dreamlu:mica-http:${micaVersion}"
     compile "com.github.yangtu222:BeanUtils:1.0.11"
-    compile "cn.hutool:hutool-core:5.6.3"
-    compile "org.apache.commons:commons-lang:3.12.0"
+    compile "cn.hutool:hutool-all:5.8.5"
     compile "org.openjdk.jmh:jmh-core:${jmhVersion}"
     compile "org.mapstruct:mapstruct:1.4.2.Final"
     compile "fr.xebia.extras:selma:1.0"

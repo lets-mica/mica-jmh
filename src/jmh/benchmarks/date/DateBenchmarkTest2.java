@@ -1,6 +1,6 @@
 package jmh.benchmarks.date;
 
-import org.apache.commons.lang3.time.FastDateFormat;
+import cn.hutool.core.date.format.FastDateFormat;
 import org.openjdk.jmh.annotations.*;
 import org.openjdk.jmh.results.format.ResultFormatType;
 import org.openjdk.jmh.runner.Runner;

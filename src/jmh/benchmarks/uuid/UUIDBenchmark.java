@@ -1,5 +1,6 @@
 package jmh.benchmarks.uuid;
 
+import cn.hutool.core.lang.id.NanoId;
 import cn.hutool.core.util.IdUtil;
 import net.dreamlu.mica.core.utils.StringUtil;
 import org.openjdk.jmh.annotations.*;
@@ -19,13 +20,18 @@ import java.util.concurrent.TimeUnit;
  * @author L.cm
  */
 @BenchmarkMode(Mode.Throughput)
-@OutputTimeUnit(TimeUnit.SECONDS)
+@OutputTimeUnit(TimeUnit.MILLISECONDS)
 @State(Scope.Thread)
 public class UUIDBenchmark {
 
 	@Benchmark
 	public String micaUUId() {
 		return StringUtil.getUUID();
+	}
+
+	@Benchmark
+	public String randomUUID() {
+		return NanoId.randomNanoId();
 	}
 
 	@Benchmark
@@ -39,6 +45,11 @@ public class UUIDBenchmark {
 	}
 
 	@Benchmark
+	public String micaNanoId() {
+		return StringUtil.getNanoId();
+	}
+
+	@Benchmark
 	public String jdk8ThreadLocalRandomUUId() {
 		ThreadLocalRandom random = ThreadLocalRandom.current();
 		UUID uuid = new UUID(random.nextInt(), random.nextInt());
@@ -48,8 +59,8 @@ public class UUIDBenchmark {
 	public static void main(String[] args) throws RunnerException {
 		Options opts = new OptionsBuilder()
 			.include(UUIDBenchmark.class.getSimpleName())
-			.warmupIterations(5)
-			.measurementIterations(5)
+			.warmupIterations(3)
+			.measurementIterations(3)
 			.jvmArgs("-server")
 			.forks(1)
 			.resultFormat(ResultFormatType.TEXT)
